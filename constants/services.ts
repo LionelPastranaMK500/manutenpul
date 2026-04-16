@@ -9,8 +9,8 @@ export const SERVICES: Service[] = [
       es: "Ambientes corporativos siempre impecables.",
     },
     fullDescription: {
-      it: "Igienizzazione profonda di postazioni e aree comuni.",
-      es: "Higienización profunda de puestos y áreas comunes.",
+      it: "Igienizzazione profonda di postazioni, aree comuni e sistemi HVAC.",
+      es: "Higienización profunda de puestos de trabajo, zonas comunes y sistemas HVAC.",
     },
     features: [
       { it: "Postazioni", es: "Puestos" },
@@ -27,8 +27,8 @@ export const SERVICES: Service[] = [
       es: "Soluciones para naves y logística.",
     },
     fullDescription: {
-      it: "Trattamento con macchinari pesanti.",
-      es: "Tratamiento con maquinaria pesada.",
+      it: "Trattamento con macchinari pesanti e spazzatrici professionali.",
+      es: "Tratamiento con maquinaria pesada y barredoras profesionales.",
     },
     features: [
       { it: "Capannoni", es: "Naves" },
@@ -45,8 +45,8 @@ export const SERVICES: Service[] = [
       es: "Eliminación certificada de virus y bacterias.",
     },
     fullDescription: {
-      it: "Protocolli medici di nebulizzazione.",
-      es: "Protocolos médicos de nebulización.",
+      it: "Protocolli medici di nebulizzazione perossido.",
+      es: "Protocolos médicos de nebulización peróxido.",
     },
     features: [
       { it: "Nebulizzazione", es: "Nebulización" },
@@ -63,8 +63,8 @@ export const SERVICES: Service[] = [
       es: "Centros distributivos y almacenes H24.",
     },
     fullDescription: {
-      it: "Pulizia magazzini e aree carico.",
-      es: "Limpieza almacenes y zonas de carga.",
+      it: "Pulizia magazzini y áreas de carga industriales.",
+      es: "Limpieza almacenes y zonas de carga industriales.",
     },
     features: [
       { it: "H24", es: "H24" },
@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
       es: "Supermercados y centros comerciales.",
     },
     fullDescription: {
-      it: "Superfici commerciali ad alto traffico.",
+      it: "Superficies comerciales de alto tráfico.",
       es: "Superficies comerciales de alto tráfico.",
     },
     features: [
@@ -99,14 +99,14 @@ export const SERVICES: Service[] = [
       es: "Complejos residenciales y áreas comunes.",
     },
     fullDescription: {
-      it: "Manutenzione ordinaria di stabili.",
-      es: "Mantenimiento ordinario de edificios.",
+      it: "Mantenimiento ordinario de edificios y áreas verdes.",
+      es: "Mantenimiento ordinario de edificios y áreas verdes.",
     },
     features: [
       { it: "Giardini", es: "Jardines" },
       { it: "Scale", es: "Escaleras" },
     ],
     category: "Residential",
-    metadata: { title: "Condomini", description: "Abitazioni." },
+    metadata: { title: "Condomini", description: "Abitaciones." },
   },
 ];
