@@ -41,7 +41,7 @@ export default function Navbar({ lang }: NavbarProps) {
                             <Link
                                 key={item.href}
                                 href={`/${lang}${item.href}`}
-                                className="font-medium text-white/80 hover:text-white text-sm transition-colors"
+                                className="font-medium text-black/80 hover:text-blue-400 text-sm transition-colors"
                             >
                                 {item.label[lang]}
                             </Link>
@@ -53,14 +53,14 @@ export default function Navbar({ lang }: NavbarProps) {
                             <Link
                                 key={item.href}
                                 href={`/${lang}${item.href}`}
-                                className="bg-accent hover:shadow-accent/25 hover:shadow-lg ml-4 px-6 py-2.5 rounded-lg font-semibold text-white text-sm transition-all duration-300 hover:bg-accent-dark"
+                                className="bg-accent hover:shadow-accent/25 hover:shadow-lg ml-4 px-6 py-2.5 rounded-lg font-semibold text-black text-sm transition-all duration-300 hover:bg-accent-dark"
                             >
                                 {item.label[lang]}
                             </Link>
                         ))}
                     </div>
 
-                    <button className="lg:hidden flex justify-center items-center w-10 h-10 text-white">
+                    <button className="lg:hidden flex justify-center items-center w-10 h-10 text-black/80">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
                             <line x1="4" y1="5" x2="20" y2="5"></line>
                             <line x1="4" y1="12" x2="20" y2="12"></line>

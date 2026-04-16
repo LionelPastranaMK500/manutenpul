@@ -15,7 +15,7 @@ export default function Hero({ lang }: HeroProps) {
     const { pre, italic, post } = titleParts[lang];
 
     return (
-        <section id="hero" className="relative flex items-center bg-navy-950 h-screen min-h-[700px] overflow-hidden">
+        <section id="hero" className="relative flex items-center h-screen min-h-[700px] overflow-hidden">
             <div className="absolute inset-0">
                 <img
                     src="/building-night.webp"
@@ -36,7 +36,7 @@ export default function Hero({ lang }: HeroProps) {
                         </span>
                     </div>
 
-                    <h1 className="mb-6 font-bold text-white text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+                    <h1 className="mb-6 font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
                         {pre}
                         <span className="block sm:inline sm:ml-3 font-serif font-normal text-accent italic">
                             {" "}{italic}
@@ -45,33 +45,33 @@ export default function Hero({ lang }: HeroProps) {
                         {post}
                     </h1>
 
-                    <p className="mb-10 max-w-xl font-light text-white/70 text-lg md:text-xl leading-relaxed">
+                    <p className="mb-10 max-w-xl font-light text-lg md:text-xl leading-relaxed">
                         {subtitle[lang].split('1 ora').map((text, i, arr) => (
                             <span key={i}>
                                 {text}
-                                {i < arr.length - 1 && <strong className="font-medium text-white">1 ora</strong>}
+                                {i < arr.length - 1 && <strong className="font-medium text-blue">1 ora</strong>}
                             </span>
                         ))}
                     </p>
 
                     <div className="flex sm:flex-row flex-col gap-4">
-                        <a href={primaryCTA.href} className="group inline-flex justify-center items-center gap-2 bg-accent px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 hover:bg-accent-dark">
+                        <a href={primaryCTA.href} className="group inline-flex justify-center items-center gap-2 bg-accent px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-accent-dark">
                             {primaryCTA.label[lang]}
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </a>
-                        <a href={secondaryCTA.href} className="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm px-8 py-4 border border-white/10 rounded-lg font-medium text-white transition-all duration-300">
+                        <a href={secondaryCTA.href} className="inline-flex justify-center items-center gap-2 bg-blue/20 hover:bg-blue/50 backdrop-blur-sm px-8 py-4 border border-black/10 rounded-lg font-medium text-black transition-all duration-300">
                             {secondaryCTA.label[lang]}
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div className="bottom-8 left-1/2 absolute flex flex-col items-center gap-2 text-white/40 -translate-x-1/2">
+            <div className="bottom-8 left-1/2 absolute flex flex-col items-center gap-2 text-black/40 -translate-x-1/2">
                 <span className="text-[10px] uppercase tracking-[.3em]">{lang === 'it' ? 'Scroll' : 'Bajar'}</span>
-                <div className="relative bg-white/20 w-[1px] h-8 overflow-hidden">
-                    <div className="top-0 left-0 absolute bg-white/60 w-full h-1/2 animate-bounce-slokw"></div>
+                <div className="relative bg-black/50 w-[1px] h-8 overflow-hidden">
+                    <div className="top-0 left-0 absolute bg-white/80 w-full h-1/2 animate-bounce-slokw"></div>
                 </div>
             </div>
         </section>
