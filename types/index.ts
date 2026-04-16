@@ -1,76 +1,94 @@
+export type I18nText = {
+    it: string
+    es: string
+}
+
 export interface SEOConfig {
-    title: string;
-    description: string;
-    keywords?: string[];
+    title: string
+    description: string
+    keywords?: string[]
 }
 
 export interface SiteImage {
-    url: string;
-    alt: string;
-    filename: string;
-    context?: string;
+    url: string
+    alt: string
+    filename: string
+    context?: string
 }
 
 export interface NavItem {
-    label: string;
-    href: string;
-    isButton?: boolean;
+    label: I18nText
+    href: string
+    isButton?: boolean
 }
 
 export interface Stat {
-    value: string;
-    label: string;
+    value: string
+    label: I18nText
 }
 
 export interface ValueProp {
-    title: string;
-    description: string;
-    image?: SiteImage;
+    title: I18nText
+    description: I18nText
+    image?: SiteImage
 }
 
 export interface HeroSection {
-    title: string
-    subtitle: string
+    title: I18nText
+    subtitle: I18nText
     primaryCTA: NavItem
     secondaryCTA: NavItem
     stats: Stat[]
 }
 
 export interface Service {
-    slug: string;
-    title: string;
-    shortDescription: string;
-    fullDescription: string;
-    features: string[];
-    benefits: string[];
-    metadata: SEOConfig;
-    category: 'cleaning' | 'sanitization' | 'pest-control' | 'other';
-    icon: string;
+    slug: string
+    title: I18nText
+    shortDescription: I18nText
+    fullDescription: I18nText
+    features: I18nText[]
+    category: 'main' | 'integrated' | 'sanitization' | 'pest-control' | 'blog'
+    icon: string
+    metadata: SEOConfig
 }
 
 export interface Location {
-    id: string;
-    city: string;
-    address: string;
-    zipCode: string;
-    province: string;
-    path: string;
-    type: 'headquarters' | 'node';
-    phone?: string;
-    email?: string;
+    id: string
+    city: string
+    address: string
+    zipCode: string
+    province: string
+    path: string
+    type: 'headquarters' | 'node'
+    phone?: string
+    email?: string
 }
 
 export interface Certification {
-    id: string;
-    name: string;
-    description: string;
-    yearStarted: number;
+    id: string
+    name: string
+    version: string
+    description: I18nText
+    yearStarted: number
 }
 
-
 export interface Testimonial {
-    author: string;
-    rating: number;
-    content: string;
-    context?: string;
+    author: string
+    rating: number
+    content: string
+    context?: string
+}
+
+export interface QuoteRequest {
+    companyName: string
+    contactName: string
+    email: string
+    phone: string
+    propertyAddress: string
+    city: string
+    surfaceM2: number
+    propertyType: string
+    serviceId: string
+    interventionType: string
+    notes?: string
 }
