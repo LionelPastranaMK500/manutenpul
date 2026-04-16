@@ -4,61 +4,109 @@ export const SERVICES: Service[] = [
   {
     slug: "pulizia-uffici",
     title: { it: "Pulizia Uffici", es: "Limpieza de Oficinas" },
-    shortDescription: { it: "Ambienti corporate sempre impeccabili.", es: "Ambientes corporativos siempre impecables." },
+    shortDescription: {
+      it: "Ambienti corporate sempre impeccabili.",
+      es: "Ambientes corporativos siempre impecables.",
+    },
     fullDescription: {
-      it: "Igienizzazione profonda di postazioni, aree comuni e sistemi HVAC.",
-      es: "Higienización profunda de puestos de trabajo, zonas comunes y sistemas HVAC."
+      it: "Igienizzazione profonda di postazioni e aree comuni.",
+      es: "Higienización profunda de puestos y áreas comunes.",
     },
     features: [
-      { it: "Manutenzione postazioni", es: "Mantenimiento de puestos de trabajo" },
-      { it: "Sistemi HVAC", es: "Sistemas HVAC" },
-      { it: "Servizi igienici", es: "Servicios higiénicos" }
+      { it: "Postazioni", es: "Puestos" },
+      { it: "Aree Comuni", es: "Áreas Comunes" },
     ],
-    category: 'main',
-    icon: "office-icon",
-    metadata: {
-      title: "Pulizia Uffici Milano | Manutenpul",
-      description: "Servizi professionali per ambienti corporate."
-    }
+    category: "Corporate",
+    metadata: { title: "Uffici", description: "Professionalità." },
   },
   {
     slug: "pulizia-industriale",
     title: { it: "Pulizia Industriale", es: "Limpieza Industrial" },
-    shortDescription: { it: "Soluzioni per capannoni e logistica.", es: "Soluciones para naves industriales y logística." },
+    shortDescription: {
+      it: "Soluzioni per capannoni e logistica.",
+      es: "Soluciones para naves y logística.",
+    },
     fullDescription: {
-      it: "Trattamento con macchinari pesanti e spazzatrici professionali.",
-      es: "Tratamiento con maquinaria pesada y barredoras profesionales."
+      it: "Trattamento con macchinari pesanti.",
+      es: "Tratamiento con maquinaria pesada.",
     },
     features: [
-      { it: "Capannoni industriali", es: "Naves industriales" },
-      { it: "Macchine lavasciuga", es: "Máquinas fregadoras" },
-      { it: "Logistica", es: "Logística" }
+      { it: "Capannoni", es: "Naves" },
+      { it: "Linee Produttive", es: "Líneas de Producción" },
     ],
-    category: 'main',
-    icon: "factory-icon",
-    metadata: {
-      title: "Pulizia Industriale Nord Italia | Manutenpul",
-      description: "Trattamenti per grandi superfici e reparti logistici."
-    }
+    category: "Industrial",
+    metadata: { title: "Industria", description: "Grandi superfici." },
   },
   {
     slug: "sanificazione",
-    title: { it: "Sanificazione", es: "Sanitización / Desinfección" },
-    shortDescription: { it: "Eliminazione certificata di virus e batteri.", es: "Eliminación certificada de virus y bacterias." },
+    title: { it: "Sanificazione", es: "Sanitización" },
+    shortDescription: {
+      it: "Eliminazione certificata di virus e batteri.",
+      es: "Eliminación certificada de virus y bacterias.",
+    },
     fullDescription: {
-      it: "Trattamento profondo con nebulizzatori di perossido d'idrogeno.",
-      es: "Tratamiento profundo con nebulizadores de peróxido de hidrógeno."
+      it: "Protocolli medici di nebulizzazione.",
+      es: "Protocolos médicos de nebulización.",
     },
     features: [
-      { it: "Nebulizzatori professionali", es: "Nebulizadores profesionales" },
-      { it: "Abbattimento batterico", es: "Reducción de carga bacteriana" },
-      { it: "Certificazione intervento", es: "Certificación de intervención" }
+      { it: "Nebulizzazione", es: "Nebulización" },
+      { it: "Certificazione", es: "Certificación" },
     ],
-    category: 'sanitization',
-    icon: "shield-check",
-    metadata: {
-      title: "Sanificazione Certificata | Manutenpul",
-      description: "Protocolli sanitari per la sicurezza degli ambienti."
-    }
-  }
+    category: "Medical",
+    metadata: { title: "Sanità", description: "Sicurezza." },
+  },
+  {
+    slug: "logistica",
+    title: { it: "Logistica", es: "Logística" },
+    shortDescription: {
+      it: "Centri distributivi e magazzini H24.",
+      es: "Centros distributivos y almacenes H24.",
+    },
+    fullDescription: {
+      it: "Pulizia magazzini e aree carico.",
+      es: "Limpieza almacenes y zonas de carga.",
+    },
+    features: [
+      { it: "H24", es: "H24" },
+      { it: "Magazzini", es: "Almacenes" },
+    ],
+    category: "Supply Chain",
+    metadata: { title: "Logistica", description: "H24." },
+  },
+  {
+    slug: "gdo-retail",
+    title: { it: "GDO / Retail", es: "GDO / Retail" },
+    shortDescription: {
+      it: "Supermercati e centri commerciali.",
+      es: "Supermercados y centros comerciales.",
+    },
+    fullDescription: {
+      it: "Superfici commerciali ad alto traffico.",
+      es: "Superficies comerciales de alto tráfico.",
+    },
+    features: [
+      { it: "Retail", es: "Retail" },
+      { it: "GDO", es: "GDO" },
+    ],
+    category: "Commercial",
+    metadata: { title: "Retail", description: "Shopping." },
+  },
+  {
+    slug: "condomini",
+    title: { it: "Condomini", es: "Condominios" },
+    shortDescription: {
+      it: "Complessi residenziali e aree comuni.",
+      es: "Complejos residenciales y áreas comunes.",
+    },
+    fullDescription: {
+      it: "Manutenzione ordinaria di stabili.",
+      es: "Mantenimiento ordinario de edificios.",
+    },
+    features: [
+      { it: "Giardini", es: "Jardines" },
+      { it: "Scale", es: "Escaleras" },
+    ],
+    category: "Residential",
+    metadata: { title: "Condomini", description: "Abitazioni." },
+  },
 ];
