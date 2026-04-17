@@ -1,0 +1,45 @@
+@reference "../../../app/globals.css";
+
+.section {
+    @apply relative bg-white py-20 lg:py-32 overflow-hidden;
+}
+
+.container {
+    @apply mx-auto px-6 lg:px-12 xl:px-24;
+}
+
+.layout {
+    @apply flex lg:flex-row flex-col items-center gap-16 lg:gap-24;
+}
+
+.content {
+    @apply flex w-full flex-col items-start text-left lg:w-3/5;
+}
+
+.label {
+    @apply inline-block mb-4 font-bold text-primary text-sm uppercase tracking-[0.2em];
+}
+
+.title {
+    @apply mb-6 font-black text-text text-4xl md:text-5xl lg:text-7xl leading-[1.1];
+}
+
+.divider {
+    @apply bg-primary mb-8 rounded-full w-24 h-2;
+}
+
+.description {
+    @apply mb-10 max-w-2xl text-text-muted text-lg md:text-2xl leading-relaxed;
+}
+
+.button {
+    @apply flex items-center gap-3 bg-primary hover:bg-primary-hover hover:shadow-2xl hover:shadow-blue-200 px-10 py-5 rounded-2xl font-bold text-white active:scale-95 transition-all duration-300;
+}
+
+.buttonText {
+    @apply text-lg;
+}
+
+.buttonIcon {
+    @apply w-6 h-6 transition-transform group-hover:translate-x-2;
+}
