@@ -9,9 +9,9 @@ export default function HomePage() {
   return (
     <main className="flex-1">
       <Hero lang={lang} />
-      <MarqueeBar lang={lang} />
       <ServiceGrid lang={lang} />
       <About lang={lang} />
+      <MarqueeBar lang={lang} />
     </main>
   );
 }
