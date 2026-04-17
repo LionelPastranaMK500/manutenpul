@@ -1,4 +1,4 @@
-import { AboutData } from "../types";
+import { AboutData } from "@/types";
 
 export const aboutContent: Record<string, AboutData> = {
   it: {

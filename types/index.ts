@@ -1,7 +1,4 @@
-export type I18nText = {
-  it: string;
-  es: string;
-};
+export type I18nText = Record<"it" | "es", string>;
 
 export interface SEOConfig {
   title: string;
@@ -34,7 +31,7 @@ export interface ValueProp {
 }
 
 export interface HeroSection {
-  title: I18nText;
+    title: I18nText;
   subtitle: I18nText;
   primaryCTA: NavItem;
   secondaryCTA: NavItem;
