@@ -1,89 +1,9 @@
 @reference "../../../app/globals.css";
 
-.hero {
-    @apply relative flex items-center bg-primary h-screen min-h-[700px] overflow-hidden text-white;
-}
-
-.background {
-    @apply absolute inset-0;
-}
-
-.image {
-    @apply opacity-40 w-full h-full object-cover scale-105;
-}
-
-.overlay {
-    @apply absolute inset-0 bg-gradient-to-r from-sky-950/95 via-sky-950/75 to-sky-950/30;
-}
-
 .gridPattern {
     @apply absolute inset-0 opacity-10;
     background-image: radial-gradient(circle, #fff 1px, transparent 1px);
     background-size: 30px 30px;
-}
-
-.container {
-    @apply z-10 relative mx-auto px-6 lg:px-10 w-full max-w-[1400px];
-}
-
-.content {
-    @apply max-w-3xl;
-}
-
-.topLine {
-    @apply flex items-center gap-3 mb-8;
-}
-
-.line {
-    @apply bg-primary w-12 h-px;
-}
-
-.location {
-    @apply font-semibold text-primary text-sm uppercase tracking-[.2em];
-}
-
-.title {
-    @apply mb-6 font-bold text-white text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight;
-}
-
-.italic {
-    @apply ml-2 font-serif font-normal text-primary italic;
-}
-
-.subtitle {
-    @apply mb-10 max-w-xl text-lg font-light leading-relaxed text-white/70 md:text-xl;
-}
-
-.highlight {
-    @apply font-medium text-primary;
-}
-
-.actions {
-    @apply flex sm:flex-row flex-col gap-4;
-}
-
-.primaryBtn {
-    @apply inline-flex justify-center items-center bg-primary hover:bg-primary-hover px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300;
-}
-
-.secondaryBtn {
-    @apply inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/10 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20;
-}
-
-.scroll {
-    @apply absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2;
-}
-
-.scrollText {
-    @apply text-[10px] uppercase tracking-[.3em] text-white/40;
-}
-
-.mouseWrapper {
-    @apply relative;
-}
-
-.scrollIcon {
-    @apply h-6 w-6 text-white/50;
 }
 
 .wheel {
@@ -96,11 +16,9 @@
         opacity: 0;
         transform: translateX(-50%) translateY(0);
     }
-
     30% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(8px);
