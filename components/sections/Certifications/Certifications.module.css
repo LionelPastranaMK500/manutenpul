@@ -1,0 +1,77 @@
+@reference "../../../app/globals.css";
+
+.section {
+    @apply bg-white py-24;
+}
+
+.container {
+    @apply mx-auto px-6 lg:px-10 max-w-[1400px];
+}
+
+.header {
+    @apply mx-auto mb-20 max-w-3xl text-center;
+}
+
+.subTitle {
+    @apply block mb-4 font-bold text-sky-500 text-xs uppercase tracking-[.3em];
+}
+
+.title {
+    @apply mb-6 font-bold text-sky-950 text-4xl md:text-5xl tracking-tight;
+}
+
+.description {
+    @apply text-zinc-500 text-lg;
+}
+
+.grid {
+    @apply gap-12 grid grid-cols-1 md:grid-cols-3;
+}
+
+.card {
+    @apply flex flex-col items-center hover:shadow-xl p-8 border border-zinc-100 hover:border-sky-200 rounded-2xl text-center transition-all duration-500;
+}
+
+.iconCircle {
+    @apply flex justify-center items-center bg-sky-50 group-hover:bg-sky-500 mb-6 border border-sky-100 rounded-full w-20 h-20 group-hover:text-white transition-colors;
+}
+
+.iconText {
+    @apply font-black text-xl;
+}
+
+.cardTitle {
+    @apply mb-2 font-black text-sky-950 text-2xl;
+}
+
+.version {
+    @apply mb-4 font-bold text-sky-600 text-sm uppercase;
+}
+
+.divider {
+    @apply bg-sky-400 mb-6 w-10 h-[2px];
+}
+
+.cardDescription {
+    @apply text-zinc-500 leading-relaxed;
+}
+
+.footer {
+    @apply flex md:flex-row flex-col justify-between items-center gap-8 bg-sky-50 mt-20 p-10 border border-sky-100 rounded-3xl;
+}
+
+.footerContent {
+    @apply md:text-left text-center;
+}
+
+.footerTitle {
+    @apply mb-2 font-bold text-sky-950 text-2xl;
+}
+
+.footerDescription {
+    @apply text-sky-800/70;
+}
+
+.button {
+    @apply bg-sky-500 hover:bg-sky-600 shadow-lg shadow-sky-200 px-8 py-4 rounded-xl font-bold text-white transition-all;
+}
