@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname, useRouter } from 'next/navigation';
+import styles from './LanguageSwitcher.module.css';
 
 export default function LanguageSwitcher() {
     const pathname = usePathname();
@@ -18,12 +19,12 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className="flex gap-2 font-medium text-sm">
-            {languages.map((lang) => (
+        <div className={styles.switcher}>
+            {languages.map(lang => (
                 <button
                     key={lang.code}
                     onClick={() => toggleLanguage(lang.code)}
-                    className={`hover:text-blue-600 transition-colors ${pathname.startsWith(`/${lang.code}`) ? 'text-blue-700 font-bold' : 'text-zinc-500'
+                    className={`${styles.button} ${pathname.startsWith(`/${lang.code}`) ? styles.active : styles.inactive
                         }`}
                 >
                     {lang.label}

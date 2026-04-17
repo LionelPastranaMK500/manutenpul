@@ -1,0 +1,17 @@
+@reference "../../../app/globals.css";
+
+.switcher {
+    @apply flex gap-2 font-medium text-sm;
+}
+
+.button {
+    @apply hover:text-sky-400 transition-colors;
+}
+
+.active {
+    @apply font-bold text-sky-300;
+}
+
+.inactive {
+    @apply text-white/70;
+}
