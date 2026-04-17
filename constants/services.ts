@@ -17,6 +17,7 @@ export const SERVICES: Service[] = [
       { it: "Aree Comuni", es: "Áreas Comunes" },
     ],
     category: "Corporate",
+    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
     metadata: { title: "Uffici", description: "Professionalità." },
   },
   {
@@ -35,6 +36,7 @@ export const SERVICES: Service[] = [
       { it: "Linee Produttive", es: "Líneas de Producción" },
     ],
     category: "Industrial",
+    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
     metadata: { title: "Industria", description: "Grandi superfici." },
   },
   {
@@ -53,6 +55,7 @@ export const SERVICES: Service[] = [
       { it: "Certificazione", es: "Certificación" },
     ],
     category: "Medical",
+    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
     metadata: { title: "Sanità", description: "Sicurezza." },
   },
   {
@@ -71,6 +74,7 @@ export const SERVICES: Service[] = [
       { it: "Magazzini", es: "Almacenes" },
     ],
     category: "Supply Chain",
+    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
     metadata: { title: "Logistica", description: "H24." },
   },
   {
@@ -89,6 +93,7 @@ export const SERVICES: Service[] = [
       { it: "GDO", es: "GDO" },
     ],
     category: "Commercial",
+    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
     metadata: { title: "Retail", description: "Shopping." },
   },
   {
@@ -107,6 +112,7 @@ export const SERVICES: Service[] = [
       { it: "Scale", es: "Escaleras" },
     ],
     category: "Residential",
+    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
     metadata: { title: "Condomini", description: "Abitaciones." },
   },
 ];

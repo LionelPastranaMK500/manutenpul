@@ -31,8 +31,9 @@ export interface ValueProp {
 }
 
 export interface HeroSection {
-    title: I18nText;
+  title: I18nText;
   subtitle: I18nText;
+  background:{ type: "image" | "video"; src: string };
   primaryCTA: NavItem;
   secondaryCTA: NavItem;
   stats: Stat[];
@@ -45,6 +46,7 @@ export interface Service {
   fullDescription: I18nText;
   features: I18nText[];
   category: string;
+  image: string;
   metadata: SEOConfig;
 }
 
