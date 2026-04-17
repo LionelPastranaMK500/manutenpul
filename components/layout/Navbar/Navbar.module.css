@@ -1,0 +1,49 @@
+@reference "../../../app/globals.css";
+
+.navbar {
+    @apply top-0 right-0 left-0 z-50 fixed transition-all duration-500;
+}
+
+.transparent {
+    @apply bg-transparent py-4;
+}
+
+.scrolled {
+    @apply bg-sky-950/100 py-2 shadow-lg backdrop-blur-md;
+}
+
+.container {
+    @apply mx-auto px-6 lg:px-10 max-w-[1400px];
+}
+
+.wrapper {
+    @apply flex justify-between items-center h-20;
+}
+
+.logo {
+    @apply flex items-center gap-3;
+}
+
+.logoBox {
+    @apply flex justify-center items-center rounded-lg w-10 h-10 font-bold text-white text-sm transition-transform duration-300;
+}
+
+.desktopMenu {
+    @apply hidden lg:flex items-center gap-8;
+}
+
+.navLink {
+    @apply text-sm font-medium text-white/80 transition-colors hover:text-sky-300;
+}
+
+.cta {
+    @apply ml-4 rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-hover hover:shadow-lg hover:shadow-sky-500/25;
+}
+
+.mobileButton {
+    @apply flex h-10 w-10 items-center justify-center text-white/80 lg:hidden;
+}
+
+.mobileButton svg {
+    @apply w-6 h-6;
+}
