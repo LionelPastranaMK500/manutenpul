@@ -1,24 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-marquee: marquee 40s linear infinite;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
 
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
+    --color-bg-page: #ffffff;
+    --color-bg-section: #f8fafc;
 
-    to {
-      transform: translateX(-50%);
-    }
-  }
-}
+    --color-text: #2563eb;
+    --color-text-muted: #64748b;
 
-.animate-marquee {
-  display: flex;
-  width: max-content;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
+    --color-marquee: #0c1a28;
 }
