@@ -1,0 +1,25 @@
+@reference "../../../app/globals.css";
+
+.badge {
+    @apply absolute bottom-10 right-10 z-20 flex max-w-[220px] items-center gap-4 rounded-xl bg-white/95 p-5 shadow-2xl backdrop-blur-sm;
+}
+
+.iconWrapper {
+    @apply flex justify-center items-center bg-sky-100 rounded-full w-12 h-12 text-sky-600;
+}
+
+.icon {
+    @apply w-7 h-7;
+}
+
+.title {
+    @apply font-bold text-sky-900 text-lg leading-tight;
+}
+
+.subtitle {
+    @apply font-medium text-[10px] text-zinc-500 uppercase tracking-tighter;
+}
+
+.year {
+    @apply font-bold text-sky-600 text-xs;
+}
