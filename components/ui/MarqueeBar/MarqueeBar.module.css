@@ -1,0 +1,40 @@
+@reference "../../../app/globals.css";
+
+.bar {
+    @apply relative z-20 overflow-hidden border-y border-white/10 bg-marquee py-5;
+}
+
+.marquee {
+    @apply flex w-max whitespace-nowrap;
+    animation: marquee 30s linear infinite;
+}
+
+.track {
+    @apply flex items-center gap-12 px-6;
+}
+
+.item {
+    @apply flex items-center gap-3 text-sm font-medium uppercase tracking-wider text-white/70;
+}
+
+.separator {
+    @apply text-white/20;
+}
+
+.icon {
+    @apply w-4 h-4;
+}
+
+.iconBlue {
+    @apply text-sky-400/70;
+}
+
+.iconGreen {
+    @apply text-emerald-400/70;
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
