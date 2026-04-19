@@ -1,17 +1,9 @@
-"use client"; // Añadimos interactividad para las animaciones
+"use client";
 
 import { use } from "react";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import { motion } from "framer-motion";
 import { Sparkles, ArrowDown, ShieldCheck } from "lucide-react";
-
-/**
- * REDISEÑO DE LISTA DE SERVICIOS:
- * - Fondo Navy 950 / Slate 50 con gradientes de luz.
- * - Título masivo (text-[100px]) en Azul Vibrante.
- * - Animaciones de entrada para el encabezado y el grid.
- * - Consistencia total con la paleta Navy/Blue.
- */
 
 interface ServicesPageProps {
   params: Promise<{

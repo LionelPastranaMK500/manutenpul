@@ -14,9 +14,11 @@ export interface SiteImage {
 }
 
 export interface NavItem {
-  label: I18nText;
+  label: { it: string; es: string };
   href: string;
   isButton?: boolean;
+  isDropdown?: boolean;
+  subItems?: { slug: string; label: string }[];
 }
 
 export interface Stat {
@@ -33,7 +35,7 @@ export interface ValueProp {
 export interface HeroSection {
   title: I18nText;
   subtitle: I18nText;
-  background:{ type: "image" | "video"; src: string };
+  background: { type: "image" | "video"; src: string };
   primaryCTA: NavItem;
   secondaryCTA: NavItem;
   stats: Stat[];
