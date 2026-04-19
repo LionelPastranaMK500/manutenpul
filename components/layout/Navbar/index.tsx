@@ -40,15 +40,17 @@ export default function Navbar({ lang }: NavbarProps) {
                     <ChevronDown size={14} className="text-blue-500" />
 
                     <div className="absolute top-full right-0 mt-0 w-48 bg-white dark:bg-navy-900 rounded-xl shadow-2xl border border-blue-100 dark:border-white/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 z-50 translate-y-2 group-hover:translate-y-0">
-                      {item.subItems?.map((sub) => (
-                        <Link
-                          key={sub.slug}
-                          href={`/${lang}/certifications/${sub.slug}`}
-                          className="block px-4 py-2 text-xs font-bold uppercase tracking-widest text-blue-900 dark:text-blue-100 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
+                      {item.subItems?.map(
+                        (sub: { slug: string; label: string }) => (
+                          <Link
+                            key={sub.slug}
+                            href={`/${lang}/certification/${sub.slug}`} // CAMBIADO A SINGULAR
+                            className="block px-4 py-2 text-xs font-bold uppercase tracking-widest text-blue-900 dark:text-blue-100 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
+                          >
+                            {sub.label}
+                          </Link>
+                        ),
+                      )}
                     </div>
                   </div>
                 ) : (

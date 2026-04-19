@@ -7,7 +7,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: t("Servizi", "Servicios"), href: "/services" },
   { label: t("Sedi", "Sedes"), href: "/locations" },
   {
-    href: "#",
+    href: "/certification",
     label: { it: "Certificazioni", es: "Certificaciones" },
     isDropdown: true,
     subItems: [
