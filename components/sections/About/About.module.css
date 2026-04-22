@@ -1,45 +1,113 @@
 @reference "../../../app/globals.css";
 
 .section {
-    @apply relative bg-white py-20 lg:py-32 overflow-hidden;
+    @apply bg-white py-44 overflow-hidden;
 }
 
 .container {
-    @apply mx-auto px-6 lg:px-12 xl:px-24;
+    @apply mx-auto px-6 lg:px-10 max-w-[1400px];
 }
 
 .layout {
-    @apply flex lg:flex-row flex-col items-center gap-16 lg:gap-24;
+    @apply items-center gap-16 lg:gap-24 grid grid-cols-1 lg:grid-cols-2;
 }
 
-.content {
-    @apply flex w-full flex-col items-start text-left lg:w-3/5;
+.imageColumn {
+    @apply relative pt-6 pl-6 w-full;
+}
+
+.accentCorner {
+    @apply top-0 left-0 z-0 absolute border-t-2 border-l-2 rounded-tl-[2rem] w-24 h-24;
+    border-color: var(--color-primary);
+}
+
+.imageWrapper {
+    @apply z-10 relative rounded-2xl w-full overflow-hidden;
+    box-shadow: 0 25px 50px -12px rgba(10, 12, 27, 0.1);
+}
+
+.image {
+    @apply w-full h-auto object-cover aspect-[4/3];
+}
+
+.badgeWrapper {
+    @apply -right-6 md:-right-8 -bottom-6 z-20 absolute;
+}
+
+.contentColumn {
+    @apply flex flex-col;
+}
+
+.labelWrapper {
+    @apply flex items-center gap-4 mb-4;
+}
+
+.labelLine {
+    @apply w-8 h-[2px];
+    background-color: var(--color-primary);
 }
 
 .label {
-    @apply inline-block mb-4 font-bold text-primary text-sm uppercase tracking-[0.2em];
+    @apply font-bold text-xs uppercase tracking-[.2em];
+    color: var(--color-primary);
 }
 
 .title {
-    @apply mb-6 font-black text-text text-4xl md:text-5xl lg:text-7xl leading-[1.1];
+    @apply mb-6 font-bold text-4xl md:text-5xl tracking-tight;
+    color: var(--color-marquee);
 }
 
-.divider {
-    @apply bg-primary mb-8 rounded-full w-24 h-2;
+.titleItalic {
+    @apply font-serif font-normal italic;
+    color: var(--color-primary);
 }
 
 .description {
-    @apply mb-10 max-w-2xl text-text-muted text-lg md:text-2xl leading-relaxed;
+    @apply mb-5 md:text-[15px] text-base md:text-left text-justify leading-relaxed;
+    color: var(--color-text-muted);
 }
 
-.button {
-    @apply flex items-center gap-3 bg-primary hover:bg-primary-hover hover:shadow-2xl hover:shadow-blue-200 px-10 py-5 rounded-2xl font-bold text-white active:scale-95 transition-all duration-300;
+.featuresGrid {
+    @apply gap-x-8 gap-y-6 grid grid-cols-1 sm:grid-cols-2 mt-6 mb-8;
 }
 
-.buttonText {
-    @apply text-lg;
+.featureItem {
+    @apply flex items-start gap-4;
 }
 
-.buttonIcon {
-    @apply w-6 h-6 transition-transform group-hover:translate-x-2;
+.featureIconWrapper {
+    @apply flex flex-shrink-0 justify-center items-center rounded-lg w-10 h-10;
+    background-color: var(--color-bg-section);
+    color: var(--color-primary);
+}
+
+.featureTextContent {
+    @apply flex flex-col mt-1;
+}
+
+.featureTitle {
+    @apply mb-1 font-bold text-sm;
+    color: var(--color-marquee);
+}
+
+.featureSubtitle {
+    @apply text-xs leading-relaxed;
+    color: var(--color-text-muted);
+}
+
+.linkCta {
+    @apply inline-flex items-center gap-2 w-max font-bold text-sm transition-all;
+    color: var(--color-primary);
+}
+
+.linkCta:hover {
+    color: var(--color-primary-hover);
+}
+
+.linkIcon {
+    @apply w-4 h-4 transition-transform;
+}
+
+.linkCta:hover .linkIcon {
+    transform: translateX(4px);
 }
