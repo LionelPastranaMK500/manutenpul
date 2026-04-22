@@ -5,6 +5,8 @@ import ServiceGrid from "@/components/sections/ServicesGrid";
 import About from "@/components/sections/About";
 import MarqueeBar from "@/components/ui/MarqueeBar";
 import Certifications from "@/components/sections/Certifications";
+import Newsletter from "@/components/sections/Newsletter";
+
 
 export default function HomePage() {
   const lang = "it";
@@ -16,6 +18,7 @@ export default function HomePage() {
       <About lang={lang} />
       <MarqueeBar lang={lang} />
       <Certifications lang={lang} />
+      <Newsletter lang={lang} />
     </main>
   );
 }
