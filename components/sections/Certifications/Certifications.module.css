@@ -1,7 +1,7 @@
 @reference "../../../app/globals.css";
 
 .section {
-    @apply bg-white py-24;
+    @apply bg-[#f8fafc] py-24 overflow-hidden;
 }
 
 .container {
@@ -12,66 +12,84 @@
     @apply mx-auto mb-20 max-w-3xl text-center;
 }
 
-.subTitle {
-    @apply block mb-4 font-bold text-sky-500 text-xs uppercase tracking-[.3em];
+.labelWrapper {
+    @apply flex justify-center items-center gap-4 mb-6;
+}
+
+.labelLine {
+    @apply w-10 h-[1px];
+    background-color: var(--color-primary);
+}
+
+.label {
+    @apply font-bold text-[10px] uppercase tracking-[.3em];
+    color: var(--color-primary);
 }
 
 .title {
-    @apply mb-6 font-bold text-sky-950 text-4xl md:text-5xl tracking-tight;
+    @apply flex flex-col items-center mb-6 text-center leading-[1.1];
+    color: var(--color-navy-950);
+}
+
+.titleMain {
+    @apply font-bold text-3xl md:text-4xl lg:text-5xl tracking-tight;
+}
+
+.titleAccent {
+    @apply font-serif font-normal text-3xl md:text-4xl lg:text-5xl italic;
+    color: var(--color-primary);
 }
 
 .description {
-    @apply text-zinc-500 text-lg;
+    @apply text-slate-500 text-lg leading-relaxed;
 }
 
 .grid {
-    @apply gap-12 grid grid-cols-1 md:grid-cols-3;
+    @apply gap-8 grid grid-cols-1 md:grid-cols-3;
 }
 
 .card {
-    @apply flex flex-col items-center hover:shadow-xl p-8 border border-zinc-100 hover:border-sky-200 rounded-2xl text-center transition-all duration-500;
+    @apply flex flex-col items-center bg-white p-10 border border-slate-200 rounded-[2rem] text-center transition-all duration-500;
 }
 
-.iconCircle {
-    @apply flex justify-center items-center bg-sky-50 group-hover:bg-sky-500 mb-6 border border-sky-100 rounded-full w-20 h-20 group-hover:text-white transition-colors;
+.cardLink {
+    @apply block;
 }
 
-.iconText {
-    @apply font-black text-xl;
+.card:hover {
+    @apply shadow-xl -translate-y-1;
 }
 
-.cardTitle {
-    @apply mb-2 font-black text-sky-950 text-2xl;
+.isoNum {
+    @apply mb-4 font-black text-7xl transition-all duration-500;
+    color: var(--color-primary);
+    opacity: 0.12;
 }
 
-.version {
-    @apply mb-4 font-bold text-sky-600 text-sm uppercase;
+.card:hover .isoNum {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.isoTitle {
+    @apply mb-1 font-black text-sm uppercase tracking-widest;
+    color: var(--color-navy-950);
+}
+
+.isoMeta {
+    @apply mb-8 font-medium text-[10px] text-slate-400;
 }
 
 .divider {
-    @apply bg-sky-400 mb-6 w-10 h-[2px];
+    @apply mb-8 w-12 h-[2.5px];
+    background-color: var(--color-primary);
 }
 
-.cardDescription {
-    @apply text-zinc-500 leading-relaxed;
+.cardTitle {
+    @apply mb-4 font-bold text-xl;
+    color: var(--color-navy-950);
 }
 
-.footer {
-    @apply flex md:flex-row flex-col justify-between items-center gap-8 bg-sky-50 mt-20 p-10 border border-sky-100 rounded-3xl;
-}
-
-.footerContent {
-    @apply md:text-left text-center;
-}
-
-.footerTitle {
-    @apply mb-2 font-bold text-sky-950 text-2xl;
-}
-
-.footerDescription {
-    @apply text-sky-800/70;
-}
-
-.button {
-    @apply bg-sky-500 hover:bg-sky-600 shadow-lg shadow-sky-200 px-8 py-4 rounded-xl font-bold text-white transition-all;
+.cardText {
+    @apply text-slate-500 text-sm leading-relaxed;
 }

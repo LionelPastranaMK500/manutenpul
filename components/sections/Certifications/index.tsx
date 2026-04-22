@@ -1,4 +1,8 @@
-import { CERTIFICATIONS, CERTIFICATIONS_CONTENT } from "@/constants/certifications";
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { CERTIFICATIONS_DATA, CERTIFICATIONS_CONTENT } from "@/constants/certifications";
 import styles from "./Certifications.module.css";
 
 interface CertificationsProps {
@@ -6,63 +10,54 @@ interface CertificationsProps {
 }
 
 export default function Certifications({ lang }: CertificationsProps) {
-    const { header, footer } = CERTIFICATIONS_CONTENT;
+    const { header } = CERTIFICATIONS_CONTENT;
 
     return (
-        <section className={styles.section}>
+        <section id="certificazioni" className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <span className={styles.subTitle}>
-                        {header.sub[lang]}
-                    </span>
+                    <div className={styles.labelWrapper}>
+                        <div className={styles.labelLine} />
+                        <span className={styles.label}>{header.sub[lang]}</span>
+                        <div className={styles.labelLine} />
+                    </div>
 
                     <h2 className={styles.title}>
-                        {header.title[lang]}
+                        <span className={styles.titleMain}>{header.title[lang]}</span>
+                        <span className={styles.titleAccent}>{header.titleAccent[lang]}</span>
                     </h2>
 
-                    <p className={styles.description}>
-                        {header.description[lang]}
-                    </p>
+                    <p className={styles.description}>{header.description[lang]}</p>
                 </div>
 
                 <div className={styles.grid}>
-                    {CERTIFICATIONS.map(cert => (
-                        <div key={cert.id} className={`group ${styles.card}`}>
-                            <div className={styles.iconCircle}>
-                                <span className={styles.iconText}>ISO</span>
-                            </div>
+                    {CERTIFICATIONS_DATA.map((item, index) => (
+                        <Link
+                            key={item.id}
+                            href={`/certifications/${item.slug}`}
+                            className={styles.cardLink}
+                        >
+                            <motion.div
+                                className={styles.card}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1, duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className={styles.isoNum}>
+                                    {String(index + 1).padStart(2, "0")}
+                                </div>
 
-                            <h3 className={styles.cardTitle}>
-                                {cert.name}
-                            </h3>
+                                <span className={styles.isoTitle}>{item.title[lang]}</span>
+                                <span className={styles.isoMeta}>{item.id}</span>
 
-                            <p className={styles.version}>
-                                {lang === "it" ? "Edizione" : "Edición"} {cert.version}
-                            </p>
+                                <div className={styles.divider} />
 
-                            <div className={styles.divider} />
-
-                            <p className={styles.cardDescription}>
-                                {cert.description[lang]}
-                            </p>
-                        </div>
+                                <h3 className={styles.cardTitle}>{item.subtitle[lang]}</h3>
+                                <p className={styles.cardText}>{item.fullDescription[lang]}</p>
+                            </motion.div>
+                        </Link>
                     ))}
-                </div>
-
-                <div className={styles.footer}>
-                    <div className={styles.footerContent}>
-                        <h4 className={styles.footerTitle}>
-                            {footer.title[lang]}
-                        </h4>
-
-                        <p className={styles.footerDescription}>
-                            {footer.description[lang]}
-                        </p>
-                    </div>
-
-                    <button className={styles.button}>
-                        {footer.cta[lang]}
-                    </button>
                 </div>
             </div>
         </section>
