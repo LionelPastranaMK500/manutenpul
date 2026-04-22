@@ -1,0 +1,63 @@
+@reference "../../../app/globals.css";
+
+.section {
+    @apply bg-white px-6 lg:px-10 py-24;
+}
+
+.container {
+    @apply mx-auto max-w-[1200px];
+}
+
+.wrapper {
+    @apply relative flex flex-col items-center shadow-2xl px-8 py-16 md:py-20 rounded-[2.5rem] overflow-hidden text-center;
+
+    background: linear-gradient(135deg, #0f172a 0%, #16253a 50%, #1e293b 100%);
+}
+
+.leftImage {
+    @apply bottom-0 left-0 absolute opacity-15 blur-sm w-48 md:w-72 pointer-events-none;
+}
+
+.rightImage {
+    @apply top-0 right-0 absolute opacity-15 blur-sm w-48 md:w-72 pointer-events-none;
+}
+
+.content {
+    @apply z-10 relative mx-auto w-full max-w-2xl;
+}
+
+.title {
+    @apply mb-4 font-bold text-white text-3xl md:text-5xl tracking-tight;
+}
+
+.description {
+    @apply mb-10 text-lg text-white/70;
+}
+
+.form {
+    @apply w-full;
+}
+
+.inputGroup {
+    @apply flex sm:flex-row flex-col gap-4 mb-6;
+}
+
+.input {
+    @apply flex-1 rounded-xl border border-white/20 bg-white px-6 py-4 text-slate-900 outline-none transition-all placeholder:text-zinc-400 focus:ring-2 focus:ring-sky-500;
+}
+
+.button {
+    @apply bg-sky-500 hover:bg-sky-600 px-10 py-4 rounded-xl font-bold text-white active:scale-95 transition-all;
+}
+
+.checkboxWrapper {
+    @apply flex justify-center items-center gap-3;
+}
+
+.checkbox {
+    @apply h-4 w-4 cursor-pointer rounded border-white/20 bg-white/10 text-sky-500;
+}
+
+.label {
+    @apply cursor-pointer text-xs text-white/50 transition-colors hover:text-white/80;
+}
