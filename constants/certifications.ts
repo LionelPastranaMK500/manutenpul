@@ -93,9 +93,13 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
 export const CERTIFICATIONS_CONTENT = {
   header: {
     sub: { it: "Eccellenza Garantita", es: "Excelencia Garantizada" },
-    title: {
-      it: "Qualità, Sicurezza e Ambiente",
-      es: "Calidad, Seguridad y Ambiente",
+    title: { 
+      it: "Tripla Certificazione", 
+      es: "Triple Certificación" 
+    },
+    titleAccent: { 
+      it: "Internazionale", 
+      es: "Internacional" 
     },
     description: {
       it: "Manutenpul opera secondo i più alti standard internazionali, garantendo processi certificati e sostenibili.",

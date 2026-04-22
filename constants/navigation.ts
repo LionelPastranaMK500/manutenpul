@@ -5,6 +5,7 @@ const t = (it: string, es: string) => ({ it, es });
 export const NAV_ITEMS: NavItem[] = [
   { label: t("Chi Siamo", "Nosotros"), href: "/about-us" },
   { label: t("Servizi", "Servicios"), href: "/services" },
+  { label: t("Blog", "Blog"), href: "/blog" },
   { label: t("Sedi", "Sedes"), href: "/locations" },
   {
     href: "/certification",

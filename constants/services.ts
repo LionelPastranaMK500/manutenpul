@@ -17,8 +17,11 @@ export const SERVICES: Service[] = [
       { it: "Aree Comuni", es: "Áreas Comunes" },
     ],
     category: "Corporate",
-    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
-    metadata: { title: "Uffici", description: "Professionalità." },
+    image: "/images/services/servizi-di-pulizia.jpg",
+    metadata: {
+      title: "Pulizia Uffici",
+      description: "Servizi professionali per uffici sempre puliti e igienizzati.",
+    },
   },
   {
     slug: "pulizia-industriale",
@@ -36,8 +39,11 @@ export const SERVICES: Service[] = [
       { it: "Linee Produttive", es: "Líneas de Producción" },
     ],
     category: "Industrial",
-    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
-    metadata: { title: "Industria", description: "Grandi superfici." },
+    image: "images/services/pulizia-industriale.jpg",
+    metadata: {
+      title: "Pulizia Industriale",
+      description: "Pulizia professionale di grandi superfici industriali e produttive.",
+    },
   },
   {
     slug: "sanificazione",
@@ -55,8 +61,11 @@ export const SERVICES: Service[] = [
       { it: "Certificazione", es: "Certificación" },
     ],
     category: "Medical",
-    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
-    metadata: { title: "Sanità", description: "Sicurezza." },
+    image: "images/services/sanificazione.jpg",
+    metadata: {
+      title: "Sanificazione",
+      description: "Sanificazione certificata per ambienti sicuri e protetti.",
+    },
   },
   {
     slug: "logistica",
@@ -66,35 +75,41 @@ export const SERVICES: Service[] = [
       es: "Centros distributivos y almacenes H24.",
     },
     fullDescription: {
-      it: "Pulizia magazzini y áreas de carga industriales.",
-      es: "Limpieza almacenes y zonas de carga industriales.",
+      it: "Pulizia magazzini e aree di carico industriali.",
+      es: "Limpieza de almacenes y zonas de carga industriales.",
     },
     features: [
       { it: "H24", es: "H24" },
       { it: "Magazzini", es: "Almacenes" },
     ],
     category: "Supply Chain",
-    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
-    metadata: { title: "Logistica", description: "H24." },
+    image: "images/services/logistica.jpg",
+    metadata: {
+      title: "Logistica",
+      description: "Pulizia professionale per magazzini e centri logistici operativi H24.",
+    },
   },
   {
-    slug: "gdo-retail",
-    title: { it: "GDO / Retail", es: "GDO / Retail" },
+    slug: "disinfestazioni",
+    title: { it: "Disinfestazioni", es: "Control de Plagas" },
     shortDescription: {
-      it: "Supermercati e centri commerciali.",
-      es: "Supermercados y centros comerciales.",
+      it: "Eliminazione professionale di infestazioni.",
+      es: "Eliminación profesional de infestaciones.",
     },
     fullDescription: {
-      it: "Superficies comerciales de alto tráfico.",
-      es: "Superficies comerciales de alto tráfico.",
+      it: "Interventi certificati contro insetti, roditori e infestazioni.",
+      es: "Intervenciones certificadas contra insectos, roedores e infestaciones.",
     },
     features: [
-      { it: "Retail", es: "Retail" },
-      { it: "GDO", es: "GDO" },
+      { it: "Roditori", es: "Roedores" },
+      { it: "Insetti", es: "Insectos" },
     ],
-    category: "Commercial",
-    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
-    metadata: { title: "Retail", description: "Shopping." },
+    category: "Pest Control",
+    image: "images/services/disinfestazioni.jpg",
+    metadata: {
+      title: "Disinfestazioni",
+      description: "Servizi certificati di controllo infestazioni per ambienti sicuri.",
+    },
   },
   {
     slug: "condomini",
@@ -104,7 +119,7 @@ export const SERVICES: Service[] = [
       es: "Complejos residenciales y áreas comunes.",
     },
     fullDescription: {
-      it: "Mantenimiento ordinario de edificios y áreas verdes.",
+      it: "Manutenzione ordinaria di edifici e aree verdi.",
       es: "Mantenimiento ordinario de edificios y áreas verdes.",
     },
     features: [
@@ -112,7 +127,10 @@ export const SERVICES: Service[] = [
       { it: "Scale", es: "Escaleras" },
     ],
     category: "Residential",
-    image: "https://placehold.co/600x400/FFFFFF/FFFFFF",
-    metadata: { title: "Condomini", description: "Abitaciones." },
+    image: "images/services/condomini.jpg",
+    metadata: {
+      title: "Condomini",
+      description: "Pulizia e manutenzione di condomini e spazi residenziali comuni.",
+    },
   },
 ];

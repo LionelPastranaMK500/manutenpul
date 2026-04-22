@@ -94,8 +94,14 @@ export interface QuoteRequest {
 }
 
 export interface AboutData {
-  title: string;
+  label: string;
+  title: { normal: string; highlight: string; end: string };
   description: string;
   buttonText: string;
   imageAlt: string;
+  features: {
+    title: string;
+    text: string;
+    icon: string;
+  }[];
 }
