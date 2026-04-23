@@ -1,4 +1,6 @@
 export type I18nText = Record<"it" | "es", string>;
+export type RegionCode = "IT" | "PE" | "ES";
+export type RegionalText = Record<RegionCode, I18nText>;
 
 export interface SEOConfig {
   title: string;

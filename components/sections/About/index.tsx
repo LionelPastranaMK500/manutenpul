@@ -6,13 +6,15 @@ import Image from "next/image"
 import { getAboutData } from "@/constants/about"
 import TripleCertBadge from "@/components/ui/TripleCertBadge"
 import styles from "./About.module.css"
+import { RegionCode } from "@/types"
 
 interface AboutProps {
   lang: "it" | "es"
+  region: RegionCode
 }
 
-export default function About({ lang }: AboutProps) {
-  const data = getAboutData(lang)
+export default function About({ lang, region }: AboutProps) {
+  const data = getAboutData(region, lang)
 
   const iconMap = {
     clock: <Clock3 size={18} strokeWidth={2} />,
@@ -38,7 +40,7 @@ export default function About({ lang }: AboutProps) {
               <Image
                 src="/images/about/about-image.jpg"
                 loading="eager"
-                alt={data.imageAlt || "Chi siamo"}
+                alt={data.imageAlt}
                 width={700}
                 height={550}
                 className={styles.image}
@@ -63,12 +65,12 @@ export default function About({ lang }: AboutProps) {
             </div>
 
             <h2 className={styles.title}>
-              {data.title.normal} <span className={styles.titleItalic}>{data.title.highlight}</span> {data.title.end}
+              {data.title.normal}{" "}
+              <span className={styles.titleItalic}>{data.title.highlight}</span>{" "}
+              {data.title.end}
             </h2>
 
-            <p className={styles.description}>
-              {data.description}
-            </p>
+            <p className={styles.description}>{data.description}</p>
 
             <div className={styles.featuresGrid}>
               {data.features.map((feature, index) => (

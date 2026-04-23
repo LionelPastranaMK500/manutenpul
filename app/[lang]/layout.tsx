@@ -11,15 +11,19 @@ export const metadata: Metadata = {
   description: "Gestione Integrata del Patrimonio Immobiliare",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
-  const lang = 'it';
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
 
   return (
-    <html lang={lang} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}>
+    <html lang={lang} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased `} data-scroll-behavior="smooth">
       <body className="flex flex-col bg-white dark:bg-navy-950 min-h-full">
-        <Navbar lang={lang} />
+        <Navbar lang={lang as "it" | "es"} />
         <main>{children}</main>
         {/* Footer */}
       </body>
