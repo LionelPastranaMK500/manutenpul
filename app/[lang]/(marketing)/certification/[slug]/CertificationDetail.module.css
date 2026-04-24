@@ -1,0 +1,109 @@
+@reference "../../../../../app/globals.css";
+
+.page {
+    @apply bg-slate-50 px-6 pt-32 pb-24 min-h-screen;
+}
+
+.container {
+    @apply mx-auto max-w-7xl;
+}
+
+.backLink {
+    @apply inline-flex items-center gap-2 hover:gap-3 mb-10 font-semibold text-blue-600 transition-all;
+}
+
+.headerGrid {
+    @apply items-center gap-14 grid lg:grid-cols-2 mb-20;
+}
+
+.iconRow {
+    @apply flex items-center gap-4 mb-6;
+}
+
+.iconBox {
+    @apply bg-blue-600 shadow-lg p-4 rounded-3xl text-white;
+}
+
+.subtitle {
+    @apply font-semibold text-blue-600 text-sm uppercase tracking-[0.3em];
+}
+
+.title {
+    @apply font-black text-slate-900 text-5xl md:text-6xl;
+}
+
+.description {
+    @apply mb-8 text-slate-600 text-lg leading-relaxed;
+}
+
+.featuresList {
+    @apply space-y-4;
+}
+
+.featureItem {
+    @apply flex items-start gap-3 bg-white shadow-sm p-4 border border-slate-100 rounded-2xl;
+}
+
+.featureText {
+    @apply font-medium text-slate-700;
+}
+
+.imageWrapper {
+    @apply relative;
+}
+
+.imageGlow {
+    @apply absolute inset-0 bg-blue-500/10 rounded-[2rem] blur-3xl;
+}
+
+.imageCard {
+    @apply relative bg-white shadow-xl p-6 border border-slate-100 rounded-[2rem];
+}
+
+.image {
+    @apply rounded-xl w-full object-cover;
+}
+
+.contentGrid {
+    @apply gap-10 grid lg:grid-cols-3;
+}
+
+.mainContent {
+    @apply space-y-10 lg:col-span-2;
+}
+
+.sectionCard {
+    @apply bg-white shadow-sm p-8 border border-slate-100 rounded-3xl;
+}
+
+.sectionTitle {
+    @apply mb-6 font-bold text-slate-900 text-2xl;
+}
+
+.paragraph {
+    @apply text-slate-600 leading-relaxed;
+}
+
+.benefitsList {
+    @apply space-y-4;
+}
+
+.benefitItem {
+    @apply flex items-start gap-3;
+}
+
+.sideCard {
+    @apply top-24 sticky bg-blue-600 shadow-xl p-8 rounded-[2rem] text-white;
+}
+
+.sideTitle {
+    @apply mb-4 font-black text-2xl;
+}
+
+.sideText {
+    @apply text-white/90 mb-6 leading-relaxed;
+}
+
+.markImage {
+    @apply object-contain;
+}
