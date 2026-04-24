@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export type I18nText = Record<"it" | "es", string>;
 export type RegionCode = "IT" | "PE" | "ES";
 export type RegionalText = Record<RegionCode, I18nText>;
@@ -67,13 +69,22 @@ export interface Location {
 }
 
 export interface Certification {
+  slug: string;
   id: string;
-  name: string;
-  version: string;
-  description: I18nText;
-  yearStarted: number;
+  icon: LucideIcon;
+  statusIcon: LucideIcon;
+  title: I18nText;
+  subtitle: I18nText;
+  fullDescription: I18nText;
+  features: I18nText[];
+  details: {
+    intro: I18nText;
+    benefits: I18nText[];
+    extra: I18nText[];
+    image: string;
+    mark: string;
+  };
 }
-
 export interface Testimonial {
   author: string;
   rating: number;
@@ -106,4 +117,36 @@ export interface AboutData {
     text: string;
     icon: string;
   }[];
+}
+
+export interface FooterContent {
+  description: I18nText;
+  legal: {
+    privacy: I18nText;
+    cookies: I18nText;
+    terms: I18nText;
+  };
+  contact: {
+    title: I18nText;
+    address: string;
+    email: string;
+    phone: string;
+  };
+  copyright: I18nText;
+}
+
+export interface PrivacySection {
+  title: I18nText;
+  content: I18nText[];
+}
+
+export interface PrivacyContent {
+  breadcrumb: {
+    home: I18nText;
+    current: I18nText;
+  };
+  pageTitle: I18nText;
+  intro: I18nText;
+  sections: PrivacySection[];
+  lastUpdated: I18nText;
 }
