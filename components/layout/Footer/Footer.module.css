@@ -1,0 +1,81 @@
+@reference "../../../app/globals.css";
+
+.footer {
+    @apply bg-navy-950 pt-20 pb-8;
+}
+
+.container {
+    @apply mx-auto px-6 lg:px-10 max-w-7xl;
+}
+
+.grid {
+    @apply gap-12 grid md:grid-cols-2 lg:grid-cols-4 mb-16;
+}
+
+.companyColumn {
+    @apply lg:col-span-1;
+}
+
+.logo {
+    @apply w-14 h-14 rounded-full mb-6 object-cover shadow-lg shadow-blue-500/20;
+}
+
+.description {
+    @apply mb-6 text-sm text-white/40 leading-relaxed;
+}
+
+.socialGroup {
+    @apply flex gap-3;
+}
+
+.socialBtn {
+    @apply flex justify-center items-center w-9 h-9 rounded-lg bg-white/5 hover:bg-blue-600/20 text-white/60 hover:text-blue-500 transition-colors;
+}
+
+.columnTitle {
+    @apply mb-6 font-semibold text-white text-sm tracking-wide;
+}
+
+.columnTitleSub {
+    @apply mt-8 mb-4 font-semibold text-white text-sm tracking-wide;
+}
+
+.linkList {
+    @apply space-y-3;
+}
+
+.linkItem {
+    @apply block text-sm text-white/40 hover:text-blue-500 transition-colors;
+}
+
+.locationList {
+    @apply space-y-4;
+}
+
+.locationItem {
+    @apply flex items-start gap-2;
+}
+
+.locationIcon {
+    @apply flex-shrink-0 mt-0.5 w-4 h-4 text-blue-500;
+}
+
+.locationText {
+    @apply text-sm text-white/40 whitespace-pre-line;
+}
+
+.bottomBar {
+    @apply flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10;
+}
+
+.copyright {
+    @apply text-xs text-white/30;
+}
+
+.legalGroup {
+    @apply flex flex-wrap justify-center gap-4 md:gap-6;
+}
+
+.legalLink {
+    @apply text-xs text-white/30 hover:text-white/60 transition-colors;
+}
