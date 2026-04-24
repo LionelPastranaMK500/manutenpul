@@ -30,11 +30,27 @@
 }
 
 .logo {
-    @apply flex items-center gap-3;
+    @apply flex items-center gap-3 shrink-0;
 }
 
 .logoBox {
-    @apply flex justify-center items-center rounded-lg w-10 h-10 font-bold text-white text-sm transition-transform duration-300;
+    @apply flex justify-center items-center w-10 h-10 transition-transform duration-300;
+}
+
+.logoBox img {
+    @apply w-full h-full object-contain;
+}
+
+.logoText {
+    @apply flex flex-col leading-none;
+}
+
+.logoText span:first-child {
+    @apply font-bold text-white text-sm tracking-wide;
+}
+
+.logoText span:last-child {
+    @apply text-[10px] text-white/70 uppercase tracking-[0.18em];
 }
 
 .desktopMenu {
@@ -46,7 +62,7 @@
 }
 
 .cta {
-    @apply bg-primary hover:bg-primary-hover shadow-md ml-4 px-6 py-2.5 rounded-lg font-semibold text-white text-sm transition-all duration-300;
+    @apply bg-blue-600 hover:bg-blue-700 shadow-md ml-4 px-6 py-2.5 rounded-lg font-semibold text-white text-sm transition-all duration-300;
 }
 
 .dropdown {

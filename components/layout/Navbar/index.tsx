@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NAV_ITEMS } from "@/constants/navigation";
 import { NavItem } from "@/types";
@@ -17,6 +18,15 @@ export default function Navbar({ lang }: NavbarProps) {
   const [showNavbar, setShowNavbar] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const normalizedPath =
+    pathname.endsWith("/") && pathname !== "/"
+      ? pathname.slice(0, -1)
+      : pathname;
+
+  const isHome = normalizedPath === `/${lang}`;
+
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -25,8 +35,12 @@ export default function Navbar({ lang }: NavbarProps) {
 
       setIsScrolled(currentScrollY > 50);
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShowNavbar(false);
+      if (isHome) {
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
       } else {
         setShowNavbar(true);
       }
@@ -35,19 +49,30 @@ export default function Navbar({ lang }: NavbarProps) {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
+
+  const applySolidStyle = !isHome || isScrolled;
 
   return (
     <nav
-      className={`${styles.navbar} 
-      ${isScrolled ? styles.scrolled : styles.transparent}
+      className={`${styles.navbar}
+      ${applySolidStyle ? styles.scrolled : styles.transparent}
       ${showNavbar ? styles.show : styles.hide}`}
     >
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Link href={`/${lang}`} className={styles.logo}>
-            <div className={styles.logoBox}>MANUTENPUL</div>
+            <div className={styles.logoBox}>
+              <img src="/images/Logo_Manu.svg" alt="Manutenpul Logo" />
+            </div>
+
+            <div className={styles.logoText}>
+              <span>MANUTENPUL</span>
+              <span>Facility Management</span>
+            </div>
           </Link>
 
           <div className={styles.desktopMenu}>
