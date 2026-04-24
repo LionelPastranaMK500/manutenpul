@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
       { it: "Linee Produttive", es: "Líneas de Producción" },
     ],
     category: "Industrial",
-    image: "images/services/pulizia-industriale.jpg",
+    image: "/images/services/pulizia-industriale.jpg",
     metadata: {
       title: "Pulizia Industriale",
       description: "Pulizia professionale di grandi superfici industriali e produttive.",
@@ -61,7 +61,7 @@ export const SERVICES: Service[] = [
       { it: "Certificazione", es: "Certificación" },
     ],
     category: "Medical",
-    image: "images/services/sanificazione.jpg",
+    image: "/images/services/sanificazione.jpg",
     metadata: {
       title: "Sanificazione",
       description: "Sanificazione certificata per ambienti sicuri e protetti.",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
       { it: "Magazzini", es: "Almacenes" },
     ],
     category: "Supply Chain",
-    image: "images/services/logistica.jpg",
+    image: "/images/services/logistica.jpg",
     metadata: {
       title: "Logistica",
       description: "Pulizia professionale per magazzini e centri logistici operativi H24.",
@@ -105,7 +105,7 @@ export const SERVICES: Service[] = [
       { it: "Insetti", es: "Insectos" },
     ],
     category: "Pest Control",
-    image: "images/services/disinfestazioni.jpg",
+    image: "/images/services/disinfestazioni.jpg",
     metadata: {
       title: "Disinfestazioni",
       description: "Servizi certificati di controllo infestazioni per ambienti sicuri.",
@@ -127,7 +127,7 @@ export const SERVICES: Service[] = [
       { it: "Scale", es: "Escaleras" },
     ],
     category: "Residential",
-    image: "images/services/condomini.jpg",
+    image: "/images/services/condomini.jpg",
     metadata: {
       title: "Condomini",
       description: "Pulizia e manutenzione di condomini e spazi residenziali comuni.",
