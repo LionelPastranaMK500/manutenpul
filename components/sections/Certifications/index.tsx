@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CERTIFICATIONS_DATA, CERTIFICATIONS_CONTENT } from "@/constants/certifications";
+import {
+    CERTIFICATIONS_DATA,
+    CERTIFICATIONS_CONTENT,
+} from "@/constants/certifications";
 import styles from "./Certifications.module.css";
 
 interface CertificationsProps {
@@ -34,7 +37,7 @@ export default function Certifications({ lang }: CertificationsProps) {
                     {CERTIFICATIONS_DATA.map((item, index) => (
                         <Link
                             key={item.id}
-                            href={`/certifications/${item.slug}`}
+                            href={`/${lang}/certification/${item.slug}`}
                             className={styles.cardLink}
                         >
                             <motion.div
