@@ -1,0 +1,29 @@
+@reference "../../../app/globals.css";
+
+.section {
+    @apply bg-white py-5 border-gray-100 border-y;
+}
+
+.container {
+    @apply mx-auto px-2 lg:px-10 max-w-[1400px];
+}
+
+.grid {
+    @apply gap-10 lg:gap-6 grid grid-cols-2 lg:grid-cols-4;
+}
+
+.card {
+    @apply lg:text-left text-center;
+}
+
+.value {
+    @apply font-extrabold text-slate-900 text-5xl md:text-6xl leading-none tracking-tight;
+}
+
+.suffix {
+    @apply ml-1 font-bold text-slate-700 text-2xl md:text-3xl;
+}
+
+.label {
+    @apply mt-3 font-medium text-gray-500 text-sm md:text-base leading-snug;
+}
