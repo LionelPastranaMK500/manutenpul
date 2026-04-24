@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/layout/Navbar";
-
+import Footer from "@/components/layout/Footer";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
@@ -25,7 +26,8 @@ export default async function RootLayout({
       <body className="flex flex-col bg-white dark:bg-navy-950 min-h-full">
         <Navbar lang={lang as "it" | "es"} />
         <main>{children}</main>
-        {/* Footer */}
+        <WhatsappButton lang={lang as "it" | "es"} />
+        <Footer lang={lang as "it" | "es"} />
       </body>
     </html>
   );
