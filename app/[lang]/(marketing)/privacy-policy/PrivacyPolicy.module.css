@@ -1,0 +1,115 @@
+@reference "../../../../app/globals.css";
+
+.section {
+    @apply bg-slate-50 px-6 pt-32 pb-24 min-h-screen;
+}
+
+.container {
+    @apply mx-auto max-w-6xl;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    @apply flex items-center mb-10 text-slate-500 text-sm;
+}
+
+.breadcrumbLink {
+    @apply font-medium text-blue-600 hover:text-blue-700 transition-colors;
+}
+
+.separator {
+    @apply mx-2 text-slate-400;
+}
+
+.current {
+    @apply font-medium text-slate-700;
+}
+
+/* Hero */
+.header {
+    @apply relative bg-gradient-to-br from-blue-600 via-blue-500 to-sky-500 shadow-xl mb-16 px-10 md:px-16 py-14 md:py-20 rounded-[2rem] overflow-hidden text-white;
+}
+
+.title {
+    @apply mb-5 max-w-4xl font-black text-4xl md:text-6xl tracking-tight;
+}
+
+.intro {
+    @apply text-base md:text-lg text-white/90 leading-relaxed max-w-3xl;
+}
+
+/* Content */
+.content {
+    @apply gap-8 grid;
+}
+
+.block {
+    @apply bg-white shadow-sm hover:shadow-md p-8 md:p-10 border border-slate-100 rounded-[1.75rem] transition-all duration-300;
+}
+
+.sectionTitle {
+    @apply mb-6 font-bold text-slate-900 text-2xl md:text-3xl tracking-tight;
+}
+
+.sectionContent {
+    @apply space-y-4;
+}
+
+.paragraph {
+    @apply text-[15px] text-slate-600 md:text-base leading-8;
+}
+
+/* Footer */
+.footer {
+    @apply mt-14 pt-8 border-slate-200 border-t text-slate-500 text-sm text-center;
+}
+
+/* Agrega o reemplaza esto en tu archivo CSS */
+
+/* El Wrapper Principal: 1 columna en móvil, 2 columnas en escritorio */
+.layoutWrapper {
+    @apply items-start gap-12 lg:gap-20 grid grid-cols-1 lg:grid-cols-[280px_1fr];
+}
+
+/* El Sidebar Fijo */
+.sidebar {
+    @apply hidden lg:block relative;
+}
+
+.sidebarSticky {
+    @apply top-32 sticky pr-4 max-h-[calc(100vh-8rem)] overflow-y-auto;
+}
+
+.sidebarTitle {
+    @apply mb-6 font-bold text-slate-400 text-xs uppercase tracking-wider;
+}
+
+.sidebarNav {
+    @apply flex flex-col space-y-4;
+}
+
+.sidebarLink {
+    @apply block pl-3 border-transparent hover:border-blue-600 border-l-2 text-slate-500 hover:text-blue-600 text-sm leading-relaxed transition-colors;
+}
+
+/* El Contenido de Texto */
+.content {
+    @apply gap-12 grid; /* Separación vertical entre secciones */
+}
+
+/* ADIÓS AL .block CERRADO - Hola al diseño abierto */
+.legalSection {
+    @apply pb-12 border-slate-200 last:border-0 border-b scroll-mt-32;
+}
+
+.sectionTitle {
+    @apply mb-6 font-bold text-slate-900 text-2xl tracking-tight;
+}
+
+.sectionContent {
+    @apply space-y-6; /* Más respiro entre párrafos */
+}
+
+.paragraph {
+    @apply text-[15px] text-slate-600 md:text-[16px] leading-relaxed;
+}
