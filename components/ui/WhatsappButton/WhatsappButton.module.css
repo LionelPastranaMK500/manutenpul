@@ -1,0 +1,44 @@
+@reference "../../../app/globals.css";
+
+.floatingButton {
+    @apply right-6 bottom-6 z-50 fixed flex justify-center items-center bg-[#25D366] shadow-xl rounded-full w-16 h-16 text-white transition-all duration-300;
+
+    animation: float 3s ease-in-out infinite, pulseShadow 3s ease-in-out infinite;
+}
+
+.floatingButton:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 20px 35px rgba(37, 211, 102, 0.35);
+}
+
+.icon {
+    @apply w-8 h-8;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulseShadow {
+    0% {
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.20);
+    }
+
+    50% {
+        box-shadow: 0 18px 30px rgba(37, 211, 102, 0.35);
+    }
+
+    100% {
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.20);
+    }
+}
