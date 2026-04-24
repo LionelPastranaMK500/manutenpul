@@ -95,7 +95,7 @@ export default function Hero({ lang }: HeroProps) {
                     >
                         <a
                             href={primaryCTA.href}
-                            className="inline-flex justify-center items-center bg-primary hover:bg-primary-hover px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300"
+                            className="inline-flex justify-center items-center bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300"
                         >
                             {primaryCTA.label[lang]} <span className="ml-2 font-serif font-semibold italic"> GRATUITO</span>
                         </a>
