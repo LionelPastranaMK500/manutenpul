@@ -4,6 +4,11 @@
     --color-primary: #2563eb;
     --color-primary-hover: #1d4ed8;
 
+    --color-accent: #C9974D;
+    --color-accent-dark: #B5863F;
+
+    --color-eco: #2E7D32;
+
     --color-bg-page: #ffffff;
     --color-bg-section: #f8fafc;
 
@@ -12,5 +17,8 @@
 
     --color-marquee: #0c1a28;
 
+    --color-navy-50: #f4f7fb;
+    --color-navy-100: #dbe6f3;
+    --color-navy-700: #1d3557;
     --color-navy-950: #0a0c1b;
 }
