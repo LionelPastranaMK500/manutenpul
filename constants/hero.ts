@@ -22,7 +22,7 @@ export const HERO_DATA: HeroSection = {
 
     background: {
         type: "image",
-        src: "https://fv5-2.files.fm/thumb_show.php?i=4gravb8r3q&view&v=1&PHPSESSID=e8a0c0ad5bd98f7bc6399bc073c108fd427e3c53",
+        src: "/images/fondo-hero_987806-607.webp",
     },
 
     stats: [
